@@ -16,16 +16,20 @@ function Page() {
           const day = moment(item.date).format('dddd');
           return (
             <div key={idx}>
-              <div>{item.eventName}</div>
-              <div className="text-xs flex gap-2 items-center">
-                <MapPinIcon className="h-[16px] w-[16px] " />
-                {item.address}
+              <div className="flex gap-2">
+                <div className="text-amber-500">{item.eventName}</div>
+
+                <div className="text-xs flex gap-2 items-center">
+                  <MapPinIcon className="h-[16px] w-[16px] " />
+                  {item.address}
+                </div>
               </div>
               {item.note && (
-                <div className="mt-2">
+                <div className="mt-1">
                   <p className="text-xs text-gray-500">{item.note}</p>
                 </div>
               )}
+
               <div className="flex gap-10 md:items-center mt-2">
                 <div>
                   <div className={`${advent_pro.className} text-4xl`}>

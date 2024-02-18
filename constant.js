@@ -74,3 +74,22 @@ export const kEvents = [
     ],
   },
 ];
+
+export const kGalleryImages = [
+  {
+    title: 'Image Gallery 1',
+    fileName: 'gallery-1',
+  },
+  {
+    title: 'Image Gallery 2',
+    fileName: 'gallery-2',
+  },
+  {
+    title: 'Image Gallery 3',
+    fileName: 'gallery-3',
+  },
+  {
+    title: 'Image Gallery 4',
+    fileName: 'gallery-4',
+  },
+];
