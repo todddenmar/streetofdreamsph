@@ -17,7 +17,9 @@ function Page() {
           return (
             <div key={idx}>
               <div className="flex gap-2">
-                <div className="text-amber-500">{item.eventName}</div>
+                <div className="dark:text-amber-500 text-amber-700">
+                  {item.eventName}
+                </div>
 
                 <div className="text-xs flex gap-2 items-center">
                   <MapPinIcon className="h-[16px] w-[16px] " />

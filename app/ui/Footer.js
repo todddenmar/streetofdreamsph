@@ -1,4 +1,5 @@
 import { kSocials, kMenuItems } from '@/constant';
+import Link from 'next/link';
 import React from 'react';
 
 function Footer() {
@@ -9,10 +10,13 @@ function Footer() {
           <div className="font-bold text-lg">Menu</div>
           <ul className="flex items-center gap-8 mt-5">
             {kMenuItems.map((item, idx) => (
-              <li style={idx > 0 ? { listStyleType: 'disc' } : null} key={idx}>
-                <a className="text-sm" href={item.url}>
+              <li
+                style={idx > 0 ? { listStyleType: 'disc' } : null}
+                key={`${idx}-footerMenu`}
+              >
+                <Link className="text-sm" href={item.url}>
                   {item.text}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
