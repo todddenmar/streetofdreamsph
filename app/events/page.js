@@ -4,7 +4,10 @@ import React from 'react';
 import { Advent_Pro } from 'next/font/google';
 import { MapPinIcon } from '@heroicons/react/24/solid';
 import PageTitle from '../ui/PageTitle';
-
+export const metadata = {
+  title: 'Street Of Dreams | Events',
+  description: 'Created by todddenmar',
+};
 const advent_pro = Advent_Pro({ subsets: ['latin'], weight: ['300'] });
 
 function Page() {
