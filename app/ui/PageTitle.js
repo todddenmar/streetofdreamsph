@@ -8,7 +8,9 @@ const lobster = Lobster({
 
 function PageTitle({ text }) {
   return (
-    <h2 className={`${lobster.className} text-6xl md:text-8xl`}>{text}</h2>
+    <h2 className={`${lobster.className} text-6xl md:text-8xl -rotate-3`}>
+      {text}
+    </h2>
   );
 }
 

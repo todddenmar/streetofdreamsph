@@ -4,7 +4,7 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer className="bg-zinc-950 w-full py-12 text-white mt-10">
+    <footer className="bg-stone-950 w-full py-12 text-white mt-10">
       <div className="max-w-[1500px] mx-auto flex flex-col md:flex-row gap-10 justify-between px-5">
         <div className="flex flex-col items-center md:flex-row md:grid">
           <div className="font-bold text-lg">Menu</div>

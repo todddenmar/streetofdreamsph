@@ -10,6 +10,7 @@ import MobileMenu from './MobileMenu';
 import { Switch } from '@/components/ui/switch';
 import { MoonIcon, SunIcon } from 'lucide-react';
 import { useTheme } from '@/lib/zustand';
+import Link from 'next/link';
 
 function NavigationMenu() {
   const path = usePathname();
@@ -21,7 +22,7 @@ function NavigationMenu() {
     <nav className="h-[80px] w-full flex flex-col justify-center dark:bg-black bg-white md:dark:bg-black md:bg-white fixed top-0 z-50 items-center">
       <div className="px-5 md:max-w-[1500px] flex justify-between items-center md: w-full md:mx-auto xl:grid grid-cols-3 ">
         <div className="flex items-center gap-[50px] xl:col-span-2 xl:flex-1 xl:grid xl:grid-cols-2">
-          <a href="/">
+          <Link href="/">
             <Image
               src={'/logo.png'}
               alt="street of dreams logo"
@@ -30,7 +31,7 @@ function NavigationMenu() {
               className="object-contain"
               priority
             />
-          </a>
+          </Link>
           <ul className="items-center gap-[50px] hidden md:flex ml-auto">
             {kMenuItems.map((item, idx) => (
               <MenuItem

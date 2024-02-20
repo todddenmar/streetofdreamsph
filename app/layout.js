@@ -12,16 +12,25 @@ const montserrat = Montserrat({
 });
 
 export default function RootLayout({ children }) {
-  const theme = useTheme((state) => state.theme);
+  const { theme } = useTheme();
   return (
     <AppContextProvider>
       <html lang="en" className={theme}>
         <body
-          className={`${montserrat.className} dark:bg-black dark:text-white bg-white text-black `}
+          className={`${montserrat.className} dark:bg-black dark:text-white bg-white text-black relative`}
         >
           <NavigationMenu />
-          <div className="mt-[80px]">{children}</div>
-          <Footer />
+          <div className="mt-[80px] relative z-10">
+            {children}
+            <Footer />
+          </div>
+
+          <div
+            style={{
+              background: theme === 'dark' ? 'url("/stardust.png")' : 'none',
+            }}
+            className="absolute inset-0 z-0"
+          ></div>
         </body>
       </html>
     </AppContextProvider>

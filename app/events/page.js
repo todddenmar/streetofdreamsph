@@ -13,13 +13,16 @@ function Page() {
       <div className="flex justify-center py-5">
         <PageTitle text="Events" />
       </div>
-      <div className="grid gap-12 mt-[50px]">
+      <div className="grid gap-12 mt-[50px] ">
         {kEvents.map((item, idx) => {
           const date = moment(item.date).format('DD');
           const month = moment(item.date).format('MMM');
           const day = moment(item.date).format('dddd');
           return (
-            <div key={idx}>
+            <div
+              key={idx}
+              className="dark:bg-stone-950 p-5 border border-solid border-amber-500 rounded-xl"
+            >
               <div className="flex gap-2">
                 <div className="dark:text-amber-500 text-amber-700">
                   {item.eventName}
