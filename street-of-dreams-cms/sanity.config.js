@@ -9,7 +9,6 @@ export default defineConfig({
 
   projectId: '9r8he94x',
   dataset: 'production',
-  basePath: '/admin',
   plugins: [structureTool(), visionTool()],
 
   schema: {

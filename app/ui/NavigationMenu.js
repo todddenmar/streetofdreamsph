@@ -18,7 +18,7 @@ function NavigationMenu() {
   const switchTheme = useTheme((state) => state.switchTheme);
 
   return (
-    <nav className="h-[80px] w-full flex flex-col justify-center md:dark:bg-black md:bg-white fixed top-0 z-50 items-center">
+    <nav className="h-[80px] w-full flex flex-col justify-center dark:bg-black bg-white md:dark:bg-black md:bg-white fixed top-0 z-50 items-center">
       <div className="px-5 md:max-w-[1500px] flex justify-between items-center md: w-full md:mx-auto xl:grid grid-cols-3 ">
         <div className="flex items-center gap-[50px] xl:col-span-2 xl:flex-1 xl:grid xl:grid-cols-2">
           <a href="/">

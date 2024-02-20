@@ -3,13 +3,17 @@ import moment from 'moment/moment';
 import React from 'react';
 import { Advent_Pro } from 'next/font/google';
 import { MapPinIcon } from '@heroicons/react/24/solid';
+import PageTitle from '../ui/PageTitle';
 
 const advent_pro = Advent_Pro({ subsets: ['latin'], weight: ['300'] });
 
 function Page() {
   return (
     <div className="p-5 max-w-[1500px] mx-auto">
-      <div className="grid gap-12">
+      <div className="flex justify-center py-5">
+        <PageTitle text="Events" />
+      </div>
+      <div className="grid gap-12 mt-[50px]">
         {kEvents.map((item, idx) => {
           const date = moment(item.date).format('DD');
           const month = moment(item.date).format('MMM');
@@ -21,14 +25,14 @@ function Page() {
                   {item.eventName}
                 </div>
 
-                <div className="text-xs flex gap-2 items-center">
+                <div className="text-sm flex gap-2 items-center">
                   <MapPinIcon className="h-[16px] w-[16px] " />
                   {item.address}
                 </div>
               </div>
               {item.note && (
                 <div className="mt-1">
-                  <p className="text-xs text-gray-500">{item.note}</p>
+                  <p className="text-sm text-gray-500">{item.note}</p>
                 </div>
               )}
 

@@ -1,6 +1,7 @@
 import { kMenuItems } from '@/constant';
 import { cn } from '@/lib/utils';
 import { XIcon } from 'lucide-react';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 function MobileMenu({ isOpen, onClose }) {
@@ -11,7 +12,7 @@ function MobileMenu({ isOpen, onClose }) {
           '-left-[100%]': isOpen === false,
           'left-0': isOpen === true,
         },
-        'fixed h-full w-full transition-all duration-300 bg-white text-black z-50 top-0  flex flex-col items-center justify-center'
+        'fixed h-full w-full transition-all duration-300 dark:bg-black bg-white dark:text-white text-black z-50 top-0  flex flex-col items-center justify-center'
       )}
     >
       <ul className="grid w-full">
@@ -19,18 +20,20 @@ function MobileMenu({ isOpen, onClose }) {
           <li
             key={idx}
             className={cn(
-              'px-5 text-center border-solid border-b-[0.5px] border-b-gray-300',
+              'px-5 text-center border-solid border-b-[0.5px] dark:border-b-gray-900 border-b-gray-300',
               {
-                'border-t-gray-300 border-t-[0.5px]': idx === 0,
+                'dark:border-t-gray-900 border-t-gray-300 border-t-[0.5px]':
+                  idx === 0,
               }
             )}
           >
-            <a
+            <Link
+              onClick={onClose}
               href={item.url}
               className="h-[50px] text-lg flex flex-col justify-center"
             >
               {item.text}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
