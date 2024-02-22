@@ -1,30 +1,38 @@
 import React from 'react';
 import PageTitle from '../ui/PageTitle';
 import Image from 'next/image';
+import { getDataByType } from '@/lib/queries/sanity';
+import { client, urlFor } from '@/lib/sanity';
+
 export const metadata = {
   title: 'Street Of Dreams | About Us',
   description: 'Created by todddenmar',
 };
-function Page() {
+async function Page() {
+  const data = await getDataByType({ type: 'about-us', client });
+  const contentArray = [];
+  data.forEach((item) =>
+    item.content.forEach((content) =>
+      content.children.forEach((child) => {
+        contentArray.push(child.text);
+      })
+    )
+  );
+
   return (
     <div className="p-5 max-w-[1500px] mx-auto">
       <div className="flex justify-center py-5">
         <PageTitle text="About Us" />
       </div>
       <div className="mt-[50px] md:text-2xl text-justify">
-        <p>
-          STREET OF DREAMS PROJECT FOR THE ARTS, PHILS., INC is a 501 (c3)
-          non-profit organization dedicated to provide educational and creative
-          support for our young people of diverse backgrounds in the United
-          States, Philippines and the world. It is committed to transform lives
-          especially the underprivileged struggling to find expressions in their
-          passion for the ART.
-        </p>
-        <br></br>
-        <p>
-          Since 2010, SOD/ ARTS PROJECT had served thousands of young people in
-          the United States and the Philippines.
-        </p>
+        <div className="flex flex-col">
+          {contentArray.map((content, idx) => (
+            <div key={`about-content-${idx}`}>
+              {content}
+              <br></br>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="mt-[50px]">
         <div className="flex flex-col md:flex-row justify-center  items-center  gap-[50px]">

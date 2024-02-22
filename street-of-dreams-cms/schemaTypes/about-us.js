@@ -4,11 +4,14 @@ export const aboutUsPage = {
   title: 'About Us Page',
   fields: [
     {
-      name: 'person',
-      title: 'Person',
+      name: 'content',
       type: 'array',
-      of: [{type: 'image', name: 'image', title: 'Person Image'}],
-      description: 'Add images to the gallery',
+      title: 'Content',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
     },
   ],
 }

@@ -19,7 +19,7 @@ export const gallery = {
       name: 'images',
       title: 'Images',
       type: 'array',
-      of: [{type: 'image'}],
+      of: [{type: 'object', fields: [{type: 'string', name: 'text'}]}, {type: 'image'}],
       description: 'Add images to the gallery',
     },
     {
