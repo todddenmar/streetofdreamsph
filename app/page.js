@@ -26,7 +26,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-stone-950 bg-opacity-85 "></div>
                 <div className="relative">
                   <h3 className="text-5xl">Mission</h3>
-                  <p className="mt-5 md:text-xl md:leading-8">
+                  <p className="mt-5 md:text-xl md:leading-8 text-justify">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
                     standard dummy text ever since the 1500s, when an unknown

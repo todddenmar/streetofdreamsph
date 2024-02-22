@@ -11,6 +11,21 @@ function Page() {
       <div className="flex justify-center py-5">
         <PageTitle text="About Us" />
       </div>
+      <div className="mt-[50px] md:text-2xl text-justify">
+        <p>
+          STREET OF DREAMS PROJECT FOR THE ARTS, PHILS., INC is a 501 (c3)
+          non-profit organization dedicated to provide educational and creative
+          support for our young people of diverse backgrounds in the United
+          States, Philippines and the world. It is committed to transform lives
+          especially the underprivileged struggling to find expressions in their
+          passion for the ART.
+        </p>
+        <br></br>
+        <p>
+          Since 2010, SOD/ ARTS PROJECT had served thousands of young people in
+          the United States and the Philippines.
+        </p>
+      </div>
       <div className="mt-[50px]">
         <div className="flex flex-col md:flex-row justify-center  items-center  gap-[50px]">
           <div className="overflow-hidden">
